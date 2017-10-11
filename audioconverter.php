@@ -10,7 +10,7 @@
     $target_file = $target_dir . basename($_FILES["audio"]["name"]);
     $target_file_res = $target_dir_res . basename($_FILES["audio"]["name"]);
     // Jangan lupa diganti
-    $site_url = "http://localhost/jarmul/";
+    $site_url = "http://10.151.36.63/";
 
 
     $uploadOk = 1;
@@ -19,9 +19,9 @@
     {
         $output_file = getcwd() . "/" . $target_dir_res . pathinfo($input_file, PATHINFO_FILENAME) . "." . $type;
         $input_file = getcwd() . "/" . $input_file;
-        $a = "/usr/bin/ffmpeg -i $input_file -ar $sample -b:v $bitrate -b:a $bitrate -ac $channel $output_file -y 2>&1";
+        $a = "ffmpeg -i $input_file -ar $sample -b:v $bitrate -b:a $bitrate -ac $channel $output_file -y 2>&1";
 
-        echo $a.'\n';
+//        echo $a.'\n';
 
         $res = shell_exec($a);
 

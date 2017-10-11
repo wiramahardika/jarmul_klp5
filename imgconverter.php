@@ -8,7 +8,7 @@
     $target_file_res = $target_dir_res . basename($_FILES["gambar"]["name"]);
 
     // Jangan lupa diganti
-    $site_url = "http://localhost/jarmul/";
+    $site_url = "http://10.151.36.63/";
 
 
     $uploadOk = 1;

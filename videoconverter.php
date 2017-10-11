@@ -8,7 +8,7 @@
     $target_file = $target_dir . str_replace(' ','_',basename($_FILES["video"]["name"]));
     $target_file_res = $target_dir_res . str_replace(' ','_',basename($_FILES["video"]["name"]));
     // Jangan lupa diganti
-    $site_url = "http://localhost/jarmul/";
+    $site_url = "http://10.151.36.63/";
 
 
     $uploadOk = 1;
@@ -20,14 +20,14 @@
 
         if($aspect_ratio == '1')
         {
-            $a = "/usr/bin/ffmpeg -i $input_file -ar $sample -b:v $bitrate -b:a $bitrate -ac $channel -r $frame_rate -vf scale=$w:-1 $output_file -y 2>&1";
+            $a = "ffmpeg -i $input_file -ar $sample -b:v $bitrate -b:a $bitrate -ac $channel -r $frame_rate -vf scale=$w:-1 $output_file -y 2>&1";
         }
         else
         {
-            $a = "/usr/bin/ffmpeg -i $input_file -ar $sample -b:v $bitrate -b:a $bitrate -ac $channel -r $frame_rate -vf scale=$w:$h $output_file -y 2>&1";
+            $a = "ffmpeg -i $input_file -ar $sample -b:v $bitrate -b:a $bitrate -ac $channel -r $frame_rate -vf scale=$w:$h $output_file -y 2>&1";
         }
 
-        echo $a;
+//        echo $a;
 
         $res = shell_exec($a);
 
