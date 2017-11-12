@@ -37,7 +37,7 @@
     <div class="container" style="padding-top:1em">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4><b>The Super Ultimate Online Radio</b></h4>
+          <h4><b>The Super Ultimate Live Video Streaming</b></h4>
           <p style="color:#BEBEBE;">by <b>Group 5</b></p>
         </div>
         <div class="panel-body">
